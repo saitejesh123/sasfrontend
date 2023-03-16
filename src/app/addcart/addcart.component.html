@@ -1,0 +1,57 @@
+<div class="register-card"><img class="profile-img-card" src="assets/img/books.jpg" height =100 width = 100 />
+    <p class="profile-name-card"></p>
+    <form [formGroup]="form" (ngSubmit)="submit()"  class="form-signup"><span class="reauth-email"></span>
+        <div class="row">
+          <!--  <div class="col-md-6 form-group">
+                <input #Email formControlName="stdid" type="number" class="form-control input_userid" id="stdid" required placeholder="stdid" />
+                <div *ngIf="f['stdid'].touched && f['stdid'].invalid" class="alert alert-danger my-2">
+                    <div *ngIf="f['stdid'].errors && f['stdid'].errors['required']">std Id is required.</div>
+                </div>
+            </div>  -->
+            <div class="col-md-6 form-group">
+                <input #Email formControlName="courseid" type="number" class="form-control input_itemid" id="courseid" required placeholder="courseid" />
+                <div *ngIf="f['courseid'].touched && f['courseid'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['courseid'].errors && f['courseid'].errors['required']">courseid is required.</div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 form-group">
+                <input #Email formControlName="coursename" type="text" class="form-control input_userid" id="coursename" required placeholder="coursename" />
+                <div *ngIf="f['coursename'].touched && f['coursename'].invalid" class="alert alert-danger my-2">
+                    <div *ngIf="f['coursename'].errors && f['coursename'].errors['required']">course Name is required.</div>
+                </div>
+            </div>
+        </div>  
+
+      <!----  <div class="row">
+            <div class="col-md-6 form-group">
+                <input #Email formControlName="stdname" type="text" class="form-control input_userid" id="stdname" required placeholder="stdname" />
+                <div *ngIf="f['stdname'].touched && f['stdname'].invalid" class="alert alert-danger my-2">
+                    <div *ngIf="f['stdname'].errors && f['stdname'].errors['required']">User Name is required.</div>
+                </div>
+            </div>
+            
+        </div>  -->
+        
+        
+       
+
+       <div class="row">
+           
+        </div> 
+
+        
+      <!--  <div class="row">
+            <div class="col-md-6 form-group">
+                <input #Email formControlName="phoneno" type="text" class="form-control input_userid" id="phoneno" required placeholder=" phoneno" />
+                <div *ngIf="f['phoneno'].touched && f['phoneno'].invalid" class="alert alert-danger my-2">
+                    <div *ngIf="f['phoneno'].errors && f['phoneno'].errors['required']">Mobile Number is required.</div>
+                    <div *ngIf="f['phoneno'].errors && f['phoneno'].errors['minlength']">Mobile Number should be of 10 digits.</div>
+                    <div *ngIf="f['phoneno'].errors && f['phoneno'].errors['maxlength']">Mobile Number should be of 10 digits.</div>
+                </div>
+            </div>
+        </div> -->
+        
+        <button class="btn btn-primary btn-block btn-lg btn-signup" type="submit">Book</button>
+        </form>
+</div>

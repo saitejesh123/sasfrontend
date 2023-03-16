@@ -1,0 +1,32 @@
+<nav class="navbar navbar-dark navbar-expand-md bg-dark">
+    <img class="logo" src="assets/img/ca2.0logo.png" width="35" height="35" >
+    <div class="container-fluid"><a class="navbar-brand" routerLink="">Campusadmit.com</a>
+        <button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggler">
+            <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="nav navbar-nav">
+
+
+
+                <li [hidden]="IsLoggedIn" class="nav-item"><a class="nav-link active" routerLink="/login">Login</a></li>
+
+                <li [hidden]="IsLoggedIn" class="nav-item"><a class="nav-link active" routerLink="/signup">Signup</a></li>
+
+ 
+                <li [hidden]="IsLoggedIn" class="nav-item"><a class="nav-link active" routerLink="/contact">ContactUs</a></li>
+                <li [hidden]="IsLoggedIn" class="nav-item"><a class="nav-link active" routerLink="/about">About</a></li>
+
+
+
+
+                <li [hidden]="!IsLoggedIn" class="nav-item"><a class="nav-link" (click)="Logout()">Logout</a></li>
+
+               <!-- <li [hidden]="!IsLoggedIn" class="nav-item"><a class="nav-link active navbar_login" routerLink="/profile">Profile</a></li>  -->
+
+
+                
+            </ul>
+        </div>
+    </div>
+</nav>

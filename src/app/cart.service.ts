@@ -3,15 +3,16 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
      
 import {  Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-
-  
+import { Data } from '@angular/router';
+import { User } from './user'; 
 import { Cart } from './cart';
+import { Post } from './post/post';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
-  private apiURL = "http://localhost:36744/api";
+  private apiURL = "http://localhost:5180/api";
   
     
   /*------------------------------------------
@@ -39,7 +40,7 @@ export class CartService {
    */
   getAll(): Observable<any> {
   
-    return this.httpClient.get(this.apiURL + '/admissioninfoes')
+    return this.httpClient.get(this.apiURL + '/admissioninfo')
   
     .pipe(
       catchError(this.errorHandler)
@@ -53,7 +54,7 @@ export class CartService {
    */
   create(cart:Cart): Observable<any> {
   
-    return this.httpClient.post(this.apiURL + '/admissioninfoes/', JSON.stringify(cart), this.httpOptions)
+    return this.httpClient.post(this.apiURL + '/admissioninfo/', JSON.stringify(cart), this.httpOptions)
   
     .pipe(
       catchError(this.errorHandler)
@@ -67,7 +68,7 @@ export class CartService {
    */
   find(id:number): Observable<any> {
   
-    return this.httpClient.get(this.apiURL + '/admissioninfoes/' + id)
+    return this.httpClient.get(this.apiURL + '/admissioninfo/' + id)
   
     .pipe(
       catchError(this.errorHandler)
@@ -81,7 +82,7 @@ export class CartService {
    */
   update(id:number, cart:Cart): Observable<any> {
   
-    return this.httpClient.put(this.apiURL + '/admissioninfoes/' + id, JSON.stringify(cart), this.httpOptions)
+    return this.httpClient.put(this.apiURL + '/admissioninfo/' + id, JSON.stringify(cart), this.httpOptions)
   
     .pipe( 
       catchError(this.errorHandler)
@@ -94,7 +95,7 @@ export class CartService {
    * @return response()
    */
   delete(id:number){
-    return this.httpClient.delete(this.apiURL + '/admissioninfoes/' + id, this.httpOptions)
+    return this.httpClient.delete(this.apiURL + '/admissioninfo/' + id, this.httpOptions)
   
     .pipe(
       catchError(this.errorHandler)

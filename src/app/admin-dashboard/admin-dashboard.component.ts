@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AdminDashboardComponent {
 
+  IsLoggedIn:boolean=false
+
+
+  Logout(){
+
+    localStorage.removeItem("User");
+    location.href = "/login";
+    
+  }
+
 }

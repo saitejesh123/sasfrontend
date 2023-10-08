@@ -11,7 +11,7 @@ import { User } from './user';
 })
 export class UserService {
 
-  private apiURL = "http://localhost:36744/api";
+  private apiURL = "http://localhost:5180/api";
     
   /*------------------------------------------
   --------------------------------------------
@@ -33,7 +33,7 @@ export class UserService {
   constructor(private httpClient: HttpClient) { }
    
   public sendGetRequest(){
-    return this.httpClient.get(this.apiURL+'/stdinfoes');
+    return this.httpClient.get(this.apiURL+'/stdinfo');
   }
   /**
    * Write code on Method
@@ -42,7 +42,7 @@ export class UserService {
    */
   getAll(): Observable<any> {
   
-    return this.httpClient.get(this.apiURL + '/stdinfoes/')
+    return this.httpClient.get(this.apiURL + '/stdinfo/')
   
     .pipe(
       catchError(this.errorHandler)
@@ -56,7 +56,7 @@ export class UserService {
    */
   create(user:User): Observable<any> {
   
-    return this.httpClient.post(this.apiURL + '/stdinfoes/', JSON.stringify(user), this.httpOptions)
+    return this.httpClient.post(this.apiURL + '/stdinfo/', JSON.stringify(user), this.httpOptions)
   
     .pipe(
       catchError(this.errorHandler)
@@ -70,7 +70,7 @@ export class UserService {
    */
   find(id:number): Observable<any> {
   
-    return this.httpClient.get(this.apiURL + '/stdinfoes/' + id)
+    return this.httpClient.get(this.apiURL + '/stdinfo/' + id)
   
     .pipe(
       catchError(this.errorHandler)
@@ -84,7 +84,7 @@ export class UserService {
    */
   update(id:number, user:User): Observable<any> {
   
-    return this.httpClient.put(this.apiURL + '/stdinfoes/' + id, JSON.stringify(user), this.httpOptions)
+    return this.httpClient.put(this.apiURL + '/stdinfo/' + id, JSON.stringify(user), this.httpOptions)
  
     .pipe( 
       catchError(this.errorHandler)
@@ -97,7 +97,7 @@ export class UserService {
    * @return response()
    */
   delete(id:number){
-    return this.httpClient.delete(this.apiURL + '/stdinfoes/' + id, this.httpOptions)
+    return this.httpClient.delete(this.apiURL + '/stdinfo/' + id, this.httpOptions)
   
     .pipe(
       catchError(this.errorHandler)

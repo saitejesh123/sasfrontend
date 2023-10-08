@@ -1,0 +1,70 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 28px;
+    color: #333;
+}
+
+.login-card {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.profile-img-card {
+    max-width: 100px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.profile-name-card {
+    font-size: 18px;
+    text-align: center;
+    margin: 15px 0;
+    font-weight: bold;
+    color: #333;
+}
+
+.row {
+    margin: 10px 0;
+}
+
+.col-md-6 {
+    text-align: center;
+}
+
+strong {
+    font-weight: bold;
+    color: #555;
+}
+
+p {
+    font-size: 16px;
+    color: #444;
+    margin: 8px 0;
+}
+
+.btn-primary {
+    display: block;
+    margin: 20px auto;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}

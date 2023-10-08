@@ -14,13 +14,16 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { AddcartComponent } from './addcart/addcart.component';
 import { ViewcartComponent } from './viewcart/viewcart.component';
+import { AdminComponent } from './Admin/Admin.component';
+import { OtherpageComponent } from './otherpage/otherpage.component';
+
 
 
 const routes: Routes = [
 
   {path:"",component:IndexComponent},
   {path:"login",component:LoginComponent},
-  {path:"profile",component:ProfileComponent},
+  {path:"profile/:stdid",component:ProfileComponent},
   {path:"signup",component:SignupComponent},
   {path:"AdminDashboard",component:AdminDashboardComponent},
   {path:"StudentDashboard",component:StudentDashboardComponent},
@@ -31,7 +34,10 @@ const routes: Routes = [
   {path:"about",component:AboutComponent},
   {path:"contact",component:ContactComponent},
   {path:"addcart",component:AddcartComponent},
-  {path:"viewcart",component:ViewcartComponent}
+  {path:"viewcart",component:ViewcartComponent},
+  {path:"Admin",component:AdminComponent},
+  {path:"otherpage",component:OtherpageComponent}
+  
   
 ];
 

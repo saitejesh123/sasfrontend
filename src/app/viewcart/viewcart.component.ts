@@ -2,6 +2,10 @@ import { Component,OnInit } from '@angular/core';
 import { CartService } from '../cart.service';
 import { Cart } from '../cart';
 import { ActivatedRoute } from '@angular/router';
+import { User } from '../user';
+import { Data } from '@angular/router';
+import { Post } from '../post/post';
+
 
 @Component({
   selector: 'app-viewcart',
@@ -12,6 +16,8 @@ export class ViewcartComponent implements OnInit{
 
   
   cart: Cart[] = [];
+  
+  
     
   /*------------------------------------------
   --------------------------------------------

@@ -1,14 +1,15 @@
 <div class="container">
-    <h1>Angular 14 CRUD Example - ItSolutionStuff.com</h1>
+    <h1>All the Available courses in the College</h1>
     
     <a href="#" routerLink="/post/create/" class="btn btn-success">Create New Post</a>
+    <a href="#" routerLink="/AdminDashboard" class="btn btn-primary">Back</a>
       
     <table class="table table-striped">
         <thead>
               <tr>
-                <th>courseid</th>
-                <th>coursename</th>
-                <th>coursefees</th>
+                <th>Course Id</th>
+                <th>Course Name</th>
+               <!-- <th>coursefees</th> -->
                 <th width="250px">Action</th>
               </tr>
         </thead>
@@ -16,7 +17,7 @@
               <tr *ngFor="let post of posts">
                 <td>{{ post.courseid }}</td>
                 <td>{{ post.coursename }}</td>
-                <td>{{ post.coursefees }}</td>
+               <!-- <td>{{ post.coursefees }}</td> -->
                 <td>
                   <a href="#" [routerLink]="['/post/', post.courseid, 'view']" class="btn btn-info">View</a>
                  <!-- <a href="#" [routerLink]="['/post/', post.courseid, 'edit']" class="btn btn-primary">Edit</a>  -->

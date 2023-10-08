@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PostService } from '../post.service';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators} from '@angular/forms';
-     
+import { FormBuilder } from '@angular/forms';     
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
@@ -19,7 +19,7 @@ export class CreateComponent implements OnInit {
   --------------------------------------------*/
   constructor(
     public postService: PostService,
-    private router: Router
+    private router: Router,private formBuilder: FormBuilder
   ) { }
     
   /**
@@ -30,7 +30,13 @@ export class CreateComponent implements OnInit {
   ngOnInit(): void {
     this.form = new FormGroup({
       coursename: new FormControl('', Validators.required),
-      coursefees: new FormControl('', Validators.required)
+      coursefees: new FormControl('', Validators.required),
+      coursedescription:new FormControl('',Validators.required),
+      courselink:new FormControl('',Validators.required)
+
+      
+
+
     });
   }
     

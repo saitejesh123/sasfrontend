@@ -1,4 +1,7 @@
+<!-- <button type="button" routerLink="/StudentDashboard" class="btn btn-primary">Back</button>
+ -->
 <h3 class="text-center my-5 course_title">Available Courses</h3>
+
 
 <div class="container">
     <div class="card courses_card">
@@ -7,18 +10,30 @@
         
     <table class="table table-striped text-center">
         <tr>
-            <th>courseid</th>
-            <th>coursename</th>
-            <th>coursefees</th>
+            <th>Course Id</th>
+            <th>Course Name</th>
+            <th>Course Fees</th>
+           <!-- <th>coursedescription</th> -->
+
+
             
         </tr>
         <tr *ngFor="let course of course">
             <td>{{course.courseid}}</td>
             <td>{{course.coursename}}</td>
             <td>{{course.coursefees}}</td>
+            <!--<td>{{course.coursedescription}}</td> -->
+
+            <td> <a href="#" [routerLink]="['/post/', course.courseid, 'view']" class="btn btn-info">View</a></td>
+
+
           
             <td>
-                <button type="button"  class="btn btn-primary" routerLink="/addcart">Buycourse</button>
+
+                
+                
+                <!--<button type="button"  class="btn btn-success" (click)="cours()">Buycourse</button> -->
+                <button type="button" class="btn btn-success" (click)="Buycourse(course) ">Buycourse</button>
             </td>              
            
         </tr>

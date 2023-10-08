@@ -42,7 +42,9 @@ export class EditComponent implements OnInit {
       
     this.form = new FormGroup({
       coursename: new FormControl('', Validators.required),
-      coursefees: new FormControl('', Validators.required)
+      coursefees: new FormControl('', Validators.required),
+      coursedescription: new FormControl('', Validators.required),
+      courselink: new FormControl('', Validators.required)
     });
   }
     

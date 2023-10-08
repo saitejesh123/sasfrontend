@@ -1,21 +1,49 @@
 <div class="container">
-    <h1>View Course</h1>
+    <h1>View All the Courses</h1>
+    
   
    <!-- <a href="#" routerLink="/post/index" class="btn btn-primary">Back</a>  -->
    
     <div>
-        <strong>courseid:</strong>
+        <strong>Course Id:</strong>
         <p>{{ post.courseid }}</p>
     </div>
    
     <div>
-        <strong>coursename:</strong>
+        <strong>Course Name:</strong>
         <p>{{ post.coursename }}</p>
     </div>
    
     <div>
-        <strong>coursefees:</strong>
+        <strong>Course Fees:</strong>
         <p>{{ post.coursefees }}</p>
     </div>
+
+    <div>
+        <strong>Course Description:</strong>
+        <p>{{ post.coursedescription }}</p>
+    </div>
+
+   <!--  <div>
+        <strong>courselink:</strong>
+        <p>{{ post.courselink }}</p>
+        
+    </div> -->
+  <!--   <div>
+        <strong>Course Broucher:  </strong>
+        <a [href]="post.courselink" target="_blank">{{ post.courselink }}</a>
+    </div>
+ -->
+    <div>
+        <strong>Course Brochure:  </strong>
+        <a [href]="post.courselink" target="_blank">View Course Broucher</a>
+    </div>
+    
+   <!--  <div>
+        <strong>courselink:</strong>
+        <a [routerLink]="post.courselink">{{ post.courselink }}</a>
+    </div> -->
+
+    
    
 </div>

@@ -12,7 +12,7 @@ import { Post } from './post';
 })
 export class PostService {
   
-  private apiURL = "http://localhost:36744/api";
+  private apiURL = "http://localhost:5180/api";
     
   /*------------------------------------------
   --------------------------------------------
@@ -39,7 +39,7 @@ export class PostService {
    */
   getAll(): Observable<any> {
   
-    return this.httpClient.get(this.apiURL + '/courses/')
+    return this.httpClient.get(this.apiURL + '/course/')
   
     .pipe(
       catchError(this.errorHandler)
@@ -47,12 +47,12 @@ export class PostService {
   }
 
   getcoursebyId(id:number){
-    return this.httpClient.get<PostService>(this.apiURL+'/courses/'+id)
+    return this.httpClient.get<PostService>(this.apiURL+'/course/'+id)
   }
 
   searchCourse(coursename:any): Observable<any> {
   
-    return this.httpClient.get<PostService>(this.apiURL + '/courses/' + coursename)
+    return this.httpClient.get<PostService>(this.apiURL + '/course/' + coursename)
   
     .pipe(
       catchError(this.errorHandler)
@@ -68,7 +68,7 @@ export class PostService {
    */
   create(post:Post): Observable<any> {
   
-    return this.httpClient.post(this.apiURL + '/courses/', JSON.stringify(post), this.httpOptions)
+    return this.httpClient.post(this.apiURL + '/course/', JSON.stringify(post), this.httpOptions)
   
     .pipe(
       catchError(this.errorHandler)
@@ -82,7 +82,7 @@ export class PostService {
    */
   find(id:number): Observable<any> {
   
-    return this.httpClient.get(this.apiURL + '/courses/' + id)
+    return this.httpClient.get(this.apiURL + '/course/' + id)
   
     .pipe(
       catchError(this.errorHandler)
@@ -96,7 +96,7 @@ export class PostService {
    */
   update(id:number, post:Post): Observable<any> {
   
-    return this.httpClient.put(this.apiURL + '/courses/' + id, JSON.stringify(post), this.httpOptions)
+    return this.httpClient.put(this.apiURL + '/course/' + id, JSON.stringify(post), this.httpOptions)
  
     .pipe( 
       catchError(this.errorHandler)
@@ -109,7 +109,7 @@ export class PostService {
    * @return response()
    */
   delete(id:number){
-    return this.httpClient.delete(this.apiURL + '/courses/' + id, this.httpOptions)
+    return this.httpClient.delete(this.apiURL + '/course/' + id, this.httpOptions)
   
     .pipe(
       catchError(this.errorHandler)

@@ -1,19 +1,23 @@
+<!-- <a href="#" routerLink="/AdminDashboard" class="btn btn-primary">Back</a>
+ -->
 <h3 class="text-center my-5 users_title">Details of all Students</h3>
 
 <div class="container">
     <div class="card users_card">
         <div class="card-body">
+
+
             
         
     <table class="table table-striped text-center">
         <tr>
-            <th>stdid</th>
-            <th> stdame</th>
-            <th>address</th>
-            <th> email</th>
-            <th>password</th>
-            <th> confirmPassword</th>
-            <th>phoneno</th>
+            <th>Student Id</th>
+            <th> Student Name</th>
+            <th>Address</th>
+            <th> Email</th>
+            <th>Password</th>
+           <!-- <th> confirmPassword</th> -->
+            <th>Contact Number</th>
             
         </tr>
         <tr *ngFor="let user of user">
@@ -22,10 +26,10 @@
             <td>{{user.address}}</td>
             <td>{{user.email}}</td>
             <td>{{user.password}}</td>
-            <td>{{user.confirm_password}}</td>
+           <!-- <td>{{user.confirm_password}}</td> -->
             <td>{{user.phoneno}}</td>
             
-            <td>
+           <td>
                 <a href="" (click)="deletePost(user.stdid)" [routerLink]="['/user']">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash del_icon" viewBox="0 0 16 16">
                     <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>

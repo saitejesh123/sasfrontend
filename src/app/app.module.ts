@@ -21,6 +21,13 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { AddcartComponent } from './addcart/addcart.component';
 import { ViewcartComponent } from './viewcart/viewcart.component';
+import { AdminComponent } from './Admin/Admin.component';
+import { FormsModule } from '@angular/forms';
+import { OtherpageComponent } from './otherpage/otherpage.component';
+
+
+
+
 
 
 @NgModule({
@@ -28,6 +35,8 @@ import { ViewcartComponent } from './viewcart/viewcart.component';
     AppComponent,
     IndexComponent,
     LoginComponent,
+    AdminComponent,
+    OtherpageComponent,
    
     NavbarComponent,
    
@@ -45,7 +54,7 @@ import { ViewcartComponent } from './viewcart/viewcart.component';
         ViewcartComponent
   ],
   imports: [
-    BrowserModule,PostModule,
+    BrowserModule,PostModule,FormsModule,
     AppRoutingModule,HttpClientModule,ReactiveFormsModule
   ],
   providers: [],

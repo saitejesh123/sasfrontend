@@ -12,6 +12,7 @@
                 <input #Email formControlName="phoneno" type="text" class="form-control" id="phoneno" required placeholder="ContcatNumber" autofocus />
                 <div *ngIf="f['phoneno'].touched && f['phoneno'].invalid" class="alert alert-danger">
                     <div *ngIf="f['phoneno'].errors && f['phoneno'].errors['required']">ContcatNumber is required.</div>
+                    <div *ngIf="f['phoneno'].hasError('invalidPhoneNumber')">ContactNumber must be 10 digits and in numeric format.</div> <!-- Display phone number format error message -->
                 </div>
             </div>
         </div>
@@ -21,7 +22,7 @@
             <div class="col-md-6 form-group">
                 <input #Email formControlName="address" type="text" class="form-control" id="address" required placeholder="address" autofocus />
                 <div *ngIf="f['address'].touched && f['address'].invalid" class="alert alert-danger">
-                    <div *ngIf="f['address'].errors && f['address'].errors['required']">Email is required!!</div>
+                    <div *ngIf="f['address'].errors && f['address'].errors['required']">Address is required!!</div>
                 </div>
             </div>
             <div class="col-md-6 form-group">
@@ -36,6 +37,7 @@
                 <input #Email formControlName="email" type="email" class="form-control" id="inputEmail" required placeholder="Email address" autofocus />
                 <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
                     <div *ngIf="f['email'].errors && f['email'].errors['required']">Email is required!!</div>
+                    <div *ngIf="f['email'].hasError('email')">Email must be in a valid format.</div> <!-- Display email format error message -->
                 </div>
             </div>
             <div class="col-md-6 form-group">
@@ -62,7 +64,7 @@
         
         
        
-        <button class="btn btn-primary btn-block btn-lg btn-signup" type="submit" [disabled]="!form.valid" >Sign Up</button>
+        <button class="btn btn-primary btn-block btn-lg btn-signup" type="submit">Sign Up</button>
         </form>
             <a class="forgot-password" routerLink="/login">Already a User ?</a></div>
 

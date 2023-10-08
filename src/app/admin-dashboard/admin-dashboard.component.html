@@ -1,6 +1,11 @@
+<!-- <a href="#" routerLink="" class="btn btn-info" style="background-color: white; color: black;">Logout</a>
+<li class="nav-item"><a href="/Admin" class="nav-link">Logout</a></li>
+
+
 <h1 class="text-center my-5 admin_dashboard_title">Admin Dashboard</h1>
 <div class="container-fluid">
   <div class="row">
+
     <div class="col-md-6">
       <div class="card admin_dashboard_card">
         <a routerLink="/post/index" class="view_courses_link">
@@ -18,10 +23,74 @@
           <div class="card-body">
             <img src="assets/img/allprofiles.jpg" height="100" width="100" class="admin_dashboard_img" alt="">
             <h5 class="text-center my-3">Students</h5>
-            <p class="text-muted text-center" id="student-name">Placeholder text</p>
+            <p class="text-muted text-center" id="student-name">Here all the register students details will available</p>
           </div>
         </a>
       </div>
     </div>
+    <div class="col-md-4">
+      <div class="card customer_dashboard_card">
+          <a routerLink="/viewcart" class="view_profiles_link">
+          <div class="card-body">
+              <img src="" class="customer_dashboard_img" alt="">
+              <h5 class="text-center my-3">View all Bookings</h5>
+              <p class="text-muted text-center">Here admin can view all the Bookings of the customers.</p>
+          </div>
+          </a>
+        </div>
   </div>
+  </div>
+</div>
+<li [hidden]="!IsLoggedIn" class="nav-item"><a class="nav-link" (click)="Logout()">Logout</a></li>
+ -->
+
+ 
+ 
+<!--  <a href="#" routerLink="" class="btn btn-info" style="background-color: red; color: black;">Logout</a>
+ --> <!-- <a href="#" routerLink="" class="btn btn-info ml-auto" style="background-color: red; color: black;">Logout</a> -->
+ <div class="d-flex justify-content-end"> 
+  <a href="#" routerLink="" class="btn btn-info" style="background-color: red; color: white;">Logout <i class="fa fa-sign-out"></i></a>
+</div>
+
+
+ 
+ <h1 class="text-center my-5 customer_dashboard_title">Welcome Admin </h1>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card customer_dashboard_card">
+                <a routerLink="/post/index" class="view_course_link">
+                <div class="card-body">
+                    <img src="https://cdn-icons-png.flaticon.com/512/562/562132.png" class="customer_dashboard_img" alt="">
+                    <h5 class="text-center my-3">Courses List</h5>
+                    <p class="text-muted text-center">Here admin can view and modify all the courses.</p>
+                </div>
+                </a>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card customer_dashboard_card">
+                <a routerLink="/user" class="view_profiles_link">
+                <div class="card-body">
+                    <img src="https://www.pngall.com/wp-content/uploads/5/Profile-Male-PNG.png" class="customer_dashboard_img" alt="">
+                    <h5 class="text-center my-3">View all Profiles</h5>
+                    <p class="text-muted text-center">Here admin can view all the profiles of the students.</p>
+                </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card customer_dashboard_card">
+                <a routerLink="/viewcart" class="view_cart_link">
+                <div class="card-body">
+                    <img src="https://img.lovepik.com/free-png/20210919/lovepik-online-educational-books-png-image_400326465_wh1200.png" class="customer_dashboard_img" alt="">
+                    <h5 class="text-center my-3">View all Bookings</h5>
+                    <p class="text-muted text-center">Here admin can view all the bookings of the courses.</p>
+                </div>
+                </a>
+              </div>
+        </div>
+        
+    </div>
 </div>

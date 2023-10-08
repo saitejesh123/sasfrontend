@@ -1,25 +1,36 @@
+<!-- <a href="#" routerLink="/StudentDashboard" class="btn btn-primary">Back</a>
+ -->
 <h3 class="text-center my-5 course_title">Available Courses</h3>
+
 
 <div class="container">
     <div class="card courses_card">
         <div class="card-body">
             
-        
     <table class="table table-striped text-center">
+        
         <tr>
-            <th>courseid</th>
-            <th>coursename</th>
-            <th>coursefees</th>
+            <th>Course Id</th>
+            <th>Course Name</th>
+            <!--<th>pdf link</th> -->
+           <!-- <th>coursefees</th> -->
             
         </tr>
         <tr *ngFor="let course of course">
             <td>{{course.courseid}}</td>
             <td>{{course.coursename}}</td>
-            <td>{{course.coursefees}}</td>
-          
+           <!-- <td>{{course.coursefees}}</td> -->
+           <td>
+            <!-- Display PDF link if available -->
+          <!--  <a *ngIf="course.pdflink" [href]="course.pdflink" target="_blank" class="btn btn-primary">Open PDF</a> -->
+            <!-- Display a message if no PDF link is available -->
+           <!-- <span *ngIf="!course.pdflink">No PDF Link</span> -->
+        </td>
+            <td> <a href="#" [routerLink]="['/post/', course.courseid, 'view']" class="btn btn-info">View</a></td>
                         
            
         </tr>
+     <!---->   
     </table>
 
 </div>

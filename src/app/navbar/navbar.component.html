@@ -13,6 +13,8 @@
 
                 <li [hidden]="IsLoggedIn" class="nav-item"><a class="nav-link active" routerLink="/signup">Signup</a></li>
 
+                <li [hidden]="IsLoggedIn" class="nav-item"><a class="nav-link active" routerLink="/Admin">Admin</a></li>
+
  
                 <li [hidden]="IsLoggedIn" class="nav-item"><a class="nav-link active" routerLink="/contact">ContactUs</a></li>
                 <li [hidden]="IsLoggedIn" class="nav-item"><a class="nav-link active" routerLink="/about">About</a></li>
@@ -21,8 +23,9 @@
 
 
                 <li [hidden]="!IsLoggedIn" class="nav-item"><a class="nav-link" (click)="Logout()">Logout</a></li>
+                
 
-               <!-- <li [hidden]="!IsLoggedIn" class="nav-item"><a class="nav-link active navbar_login" routerLink="/profile">Profile</a></li>  -->
+                <li [hidden]="!IsLoggedIn" class="nav-item"><a class="nav-link active navbar_admin" routerLink="/profile/83">Profile</a></li>  
 
 
                 
